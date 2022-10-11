@@ -1,0 +1,312 @@
+.rectangle_menu {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    left: 0px;
+    top: 0px;
+    background: #004C93;
+}
+
+.menu_name {
+    position: absolute;
+    width: 200px;
+    height: 29px;
+    left: 30px;
+    top: 38px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+    color: #FFFFFF;
+    border: 1px solid #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.menu_main_info {
+    position: absolute;
+    width: 68px;
+    height: 19px;
+    left: 570px;
+    top: 44px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+}
+
+.menu_other_info {
+    position: absolute;
+    width: 146px;
+    height: 19px;
+    left: 663px;
+    top: 44px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+.headline_main {
+    position: absolute;
+    width: 355px;
+    height: 44px;
+    left: 30px;
+    top: 200px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    /* identical to box height */
+    color: #004C93;
+}
+
+.headline_programming {
+    position: absolute;
+    width: 515px;
+    height: 58px;
+    left: 30px;
+    top: 289px;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #004C93;
+}
+
+.headline_my_interests {
+    position: absolute;
+    width: 515px;
+    height: 58px;
+    left: 30px;
+    top: 392px;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #004C93;
+}
+
+.my_photo {
+    position: absolute;
+    width: 521px;
+    height: 659px;
+    left: 710px;
+    top: 150px;
+    background: url(photo.jpg);
+}
+
+.rectangle {
+    position: absolute;
+    width: 100%;
+    height: 581px;
+    left: 0px;
+    top: 838px;
+    background: #F3FBFF;
+}
+
+.headline_rectangle {
+    padding: 30px;
+    width: 339px;
+    height: 44px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    /* identical to box height */
+    color: #004C93;
+}
+
+.box {
+    position: absolute;
+    margin-left: 30px;
+    box-sizing: border-box;
+    width: 200px;
+    height: 289px;
+    border: 1px solid #004C93;
+    border-radius: 4px;
+}
+
+.box_title {
+    padding-left: 10px;
+    width: 55px;
+    height: 190px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 120px;
+    line-height: 160%;
+    /* or 192px */
+    color: #004C93;
+}
+
+.box_content {
+    padding-left: 10px;
+    width: 175px;
+    height: 120px;
+    left: 177px;
+    top: 1101px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    /* or 26px */
+    color: #2E4674;
+}
+
+.calculating_block_text {
+    position: absolute;
+    width: 151px;
+    height: 22px;
+    left: 30px;
+    top: 1520px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    /* or 22px */
+    color: #000000;
+}
+
+.calculating_input {
+    box-sizing: border-box;
+    position: absolute;
+    width: 555px;
+    height: 32px;
+    left: 30px;
+    top: 1547px;
+    border: 1px solid #000000;
+}
+
+.button_calculate {
+    position: absolute;
+    width: 168px;
+    height: 50px;
+    left: 30px;
+    top: 1794px;
+    background   : #004C93;
+    border-radius: 5px;
+    color        : #FFFFFF;
+    font-family  : 'Roboto';
+    font-weight  : 400;
+    font-size    : 14px;
+    cursor       : pointer;
+    /* or 22px */
+}
+
+.button_calculate:hover {
+    background: purple;
+}
+
+.sign_question {
+    text-align: center;
+    width: 54.69px;
+    height: 120px;
+    margin: 0 auto;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 120px;
+    line-height: 100%;
+    /* identical to box height, or 120px */
+    color: #004C93;   
+}
+
+.photo_smile {
+    position: absolute;
+    width: 600px;
+    height: 567px;
+    left: 415px;
+    top: 2500px;
+    background: url(smile.jpg);
+}
+
+.label_vkontakte {
+    position: absolute;
+    left: 1243px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 32px;
+    height: 32px;
+    background: url(Vector.jpg);
+}
+
+.window {
+    position: absolute;
+    width: 600px;
+    margin-top: 120px;
+    top: 81%;
+    left: 25%;
+    transform: translate(-50%,-50%);
+    border-radius: 5px;
+    border: 1px solid #000000;
+    padding: 10px;
+    background-color: #dddddd;
+    }
+
+.top {
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 100%;
+}
+.result {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 100%;
+}
+.finish {
+    text-align: right;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.finish > button {
+    color: #FFFFFF;
+    background: blue;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.finish > button:hover{
+    background: purple;
+}
+
+.hidden {
+    display: none;
+}
+.window_error {
+    position: absolute;
+    width: 600px;
+    margin-top: 120px;
+    top: 78%;
+    left: 25%;
+    transform: translate(-50%,-50%);
+    border-radius: 5px;
+    border: 1px solid #000000;
+    padding: 10px;
+    background-color: #dddddd;    
+}
