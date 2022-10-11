@@ -1,0 +1,161 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        
+        <title>Моя страница</title>
+
+        <link rel="stylesheet" href="my_page.css" />
+
+        <script src="my_window.js">
+
+ 
+        </script>
+
+    </head>
+
+    <body>
+        <div class="rectangle_menu">
+            <div class="menu_name">Чернов Дмитрий</div>
+            <div class="menu_main_info">Обо мне</div>
+            <div class="menu_other_info">Моя деятельность</div>
+            <div class="menu_other_info" style="width: 100px; left: 835px;">Калькулятор</div>
+            <div class="menu_other_info" style="width: 90px; left: 961px;">Сложности</div>
+            <div class="menu_other_info" style="width: 95px; left: 1077px;">Настроение</div>
+            <div class="menu_other_info" style="width: 75px; left: 1198px;">Контакты</div>
+        </div>
+
+        <div class="headline_main">Меня зовут Дмитрий!</div>
+
+        <div class="headline_programming">И я хочу обучиться программированию, потому что это всегда меня интересовало</div>
+
+        <div class="headline_my_interests">А еще я люблю ходить в походы и играть в волейбол</div>
+
+        <div class="my_photo">
+            <img src="D:\Study\Task1\photo.jpg">
+        </div>
+
+        <div class="headline_main" style="width: 237px; top: 1446px;">Калькулятор</div>
+
+        <div class="rectangle">
+            <div class="headline_rectangle">Моя деятельность</div>
+
+            <div class="box">
+                <div class="box_title">1</div>    
+                <div class="box_content">Я работаю в сфере нефтяной промышленности</div>
+            </div>
+
+            <div class="box" style="margin-left: 260px; margin-top: 150px;">
+                <div class="box_title">2</div>    
+                <div class="box_content">Изучаю языки программирования</div>
+            </div>
+            
+            <div class="box" style="margin-left: 490px;">
+                <div class="box_title">3</div>    
+                <div class="box_content">Прохожу курс по web-разработке</div>
+            </div>   
+
+            <div class="box" style="margin-left: 720px; margin-top: 150px;">
+                <div class="box_title">4</div>    
+                <div class="box_content">Играю в Квиз</div>
+            </div>
+
+            <div class="box" style="margin-left: 950px;">
+                <div class="box_title">5</div>    
+                <div class="box_content">Занимаюсь йогой</div>
+            </div>   
+        </div>
+
+        <div class="calculating_block_text">Введите первое число</div>
+
+        <input type="number" class="calculating_input number1_input"/>
+
+        <div class="calculating_block_text" style="width: 138px; top: 1608px">Введите операцию</div>
+    
+        <input type="text" class="calculating_input operation_value" style="top: 1635px;" list="list" />
+            <datalist id="list">
+                <option value="Сложение"></option>
+                <option value="Вычитание"></option>
+                <option value="Умножение"></option>
+                <option value="Деление"></option>
+            </datalist>
+        
+
+        <div class="calculating_block_text" style="width: 150px; top: 1696px;">Введите второе число</div>
+
+        <input type="number" class="calculating_input number2_input" style="top: 1723px;"/>
+
+        <button class="button_calculate" onclick="show()">Вычислить</button>
+
+        <div class="rectangle" style="top: 1894px; height: 539px;">
+            <div class="headline_rectangle" style="width: 209; top: 1926px;">Сложности</div>
+
+            <div class="box" style="height: 264px;">
+                <div class="sign_question">?</div>    
+                <div class="box_content" style="padding-top: 24px;">Не получалось разместить блок поверх картинки</div>
+            </div>
+
+            <div class="box" style="height: 264px; margin-left: 260px; margin-top: 150px;">
+                <div class="sign_question">?</div>    
+                <div class="box_content" style="padding-top: 24px;">Не получалось получить данные из выпадающего списка</div>
+            </div>
+
+            <div class="box" style="height: 264px; margin-left: 490px">
+                <div class="sign_question">?</div>    
+                <div class="box_content" style="padding-top: 24px;">Не получалось прикрепить растровую картинку</div>
+            </div>
+
+            <div class="box" style="height: 264px; margin-left: 720px; margin-top: 150px;">
+                <div class="sign_question">?</div>    
+                <div class="box_content" style="padding-top: 24px;">Не получалось центрировать блок по центру страницы</div>
+            </div>
+
+            <div class="box" style="height: 264px; margin-left: 950px">
+                <div class="sign_question">?</div>    
+                <div class="box_content" style="padding-top: 24px;">Не получалось сделать многоуровневый блок if-else</div>
+            </div>
+
+        </div>
+      
+        <div class="headline_main" style="width: 220px; top: 2486px;">Настроение</div>
+
+        <div class="photo_smile">
+            <img src="D:\Study\Task1\smile.jpg">
+        </div>   
+
+        <div class="rectangle_menu" style="top: 3180;">
+            <div class="menu_name" style="padding: auto; border: none; text-shadow: none;">Чернов Дмитрий</div>
+            <div class="label_vkontakte">
+                <a href="https://vk.com/id120867748"><img src="D:\Study\Task1\Vector.jpg"></a>
+            </div>
+        </div>
+
+        <div class="window hidden">
+            <h2>
+                 <div class="top">
+                    Результат
+                </div>
+            </h2>
+            <hr />
+                <div class="result">
+                    Основная часть
+                </div>              
+            <hr />
+            <div class="finish">
+                <button onclick="hide()">Закрыть</button>
+            </div>
+        </div>
+
+        <div class="window_error hidden">
+            <div class="result">
+                Ошибка ввода
+            </div>    
+            <div class="finish">
+                <button onclick="hide_error()">Закрыть</button>
+            </div>
+        </div>
+
+    </body>
+
+</html>
