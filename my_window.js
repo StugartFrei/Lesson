@@ -28,7 +28,7 @@ function show() {
     let operation_value = document.querySelector(".operation_value");
     let operation = operation_value.value;
     
-   if (number1!=="" && number2!=="" && operation!==""){
+   if (number1!=="" && number2!==""){
         if(operation == "Сложение"){
             let operation_result = addition(+number1,+number2);
             let number_result = document.querySelector(".result");
