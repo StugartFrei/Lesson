@@ -6,6 +6,7 @@
     }
     else
 
+<<<<<<< HEAD
     if(isset($_REQUEST['number1_input'], $_REQUEST['number2_input'])){
         $operation_value = $_REQUEST['operation_value'];
         $number1_input = $_REQUEST['number1_input'];
@@ -18,13 +19,37 @@
         }
         else if($operation_value == "Умножение"){
             $number_result = (int)$number1_input * (int)$number2_input;   
+=======
+    if(isset($_REQUEST['number1_input']) && isset($_REQUEST['number2_input'])){
+        $operation_value = $_REQUEST['operation_value'];
+        if($operation_value == "Сложение"){
+            $number1_input = $_REQUEST['number1_input'];
+            $number2_input = $_REQUEST['number2_input'];
+            $number_result = $number1_input + $number2_input;
+        }
+        else if($operation_value == "Вычитание"){
+            $number1_input = $_REQUEST['number1_input'];
+            $number2_input = $_REQUEST['number2_input'];
+            $number_result = $number1_input - $number2_input;    
+        }
+        else if($operation_value == "Умножение"){
+            $number1_input = $_REQUEST['number1_input'];
+            $number2_input = $_REQUEST['number2_input'];
+            $number_result = $number1_input * $number2_input;    
+>>>>>>> fbf7d7dbcd51c51255dea6a01b5f63513681fd35
         }
         else if($operation_value == "Деление"){
                 if($_REQUEST['number2_input']==0){
                     $error = "Ошибка ввода";
                 }
                 else {
+<<<<<<< HEAD
                     $number_result = (int)$number1_input / (int)$number2_input; 
+=======
+                    $number1_input = $_REQUEST['number1_input'];
+                    $number2_input = $_REQUEST['number2_input'];
+                    $number_result = $number1_input / $number2_input;  
+>>>>>>> fbf7d7dbcd51c51255dea6a01b5f63513681fd35
                 }
         }
 
@@ -60,7 +85,11 @@
 
         </form>
 
+<<<<<<< HEAD
         <?php if(isset ($error)) { ?>
+=======
+        <?php if(!empty ($error)) { ?>
+>>>>>>> fbf7d7dbcd51c51255dea6a01b5f63513681fd35
             <div>
                 <span>
                     <?php 
@@ -83,7 +112,12 @@
                     ?>    
                 </span>
             </div>
+<<<<<<< HEAD
          <?php } ?>
+=======
+        <?php } ?>
+
+>>>>>>> fbf7d7dbcd51c51255dea6a01b5f63513681fd35
     </body>
 
 </html>   
