@@ -1,0 +1,75 @@
+<head>
+    <meta charset="utf-8">
+    <script>
+          
+        function calculating(){
+            let number1Field = document.querySelector("#number_1");
+            let number_1 = number1Field.value;
+
+            let number2Field = document.querySelector("#number_2");
+            let number_2 = number2Field.value;
+
+            let operationField = document.querySelector("#operation_enter");
+            let operation_enter = operationField.value;
+
+            if(number_1 !== "" && number_2 !== ""){
+                if ((number_2 == 0) && (operation_enter == "Деление")) {
+                    let number2_Field = document.querySelector(".result");
+                    number2_Field.innerHTML = "Ошибка ввода";                            
+                    resultField = document.querySelector(".result2");
+                    resultField.innerHTML = "";
+                }
+                let number_arr = [number_1, number_2, operation_enter];
+
+                fetch("calc_ajax.php?number_arr=" + number_arr)
+                    .then(response => response.json())
+                    .then(jsonObject => {
+                        console.dir(jsonObject);
+                            let i;
+                            let s = "";
+                            for(i = 0; i < jsonObject.results.length; i++){
+                                s += jsonObject.results[i].join('<br>') + " ; ";
+                            }
+                            resultField = document.querySelector(".result2");
+                            resultField.innerHTML = s;
+                        })
+            }   else {
+                    let number2_Field = document.querySelector(".result");
+                    number2_Field.innerHTML = "Введите числа";                            
+                    resultField = document.querySelector(".result2");
+                    resultField.innerHTML = "";
+                }
+
+        }
+    
+    </script>
+</head>
+
+<body>
+    <div>    
+        <p>Первое число:</p>
+        <input type="number" name = "number_1" id='number_1'/>
+    </div> 
+    <div>
+        <p>Второе число:</p>
+        <input type="number" name = "number_2" id='number_2'/>
+    </div>
+    <div>
+        <br><select type="text" name = "operation_enter" id='operation_enter'>
+            <option>Сложение</option>
+            <option>Вычитание</option>
+            <option>Умножение</option>
+            <option>Деление</option>
+        </select>
+    </div>                
+    <div>
+        <br><button onclick="calculating()">Вычислить</button>
+    </div>
+
+    <div class="result"></div>
+
+    <div class="result2"></div>
+
+</body>
+
+</html> 

@@ -1,0 +1,52 @@
+<html>
+
+  <head>
+      <meta charset="utf-8">
+
+      <script>
+        function show(){
+        let result_output = "";
+        let number1_input = document.querySelector("#number1_input");
+    
+        let number1 = +number1_input.value;
+  
+        let number2_input = document.querySelector("#number2_input");
+        let number2 = +number2_input.value;
+
+        let dif_numbers = 0;
+
+        if (number1 > 0 && number2 > 0) {
+                 let dif_numbers = number1 - number2;
+                 if (Math.abs(dif_numbers) > 20){
+                        let result_output = document.querySelector(".result");
+                        result_output.innerHTML = "Да";
+                      } else {
+                        let result_output = document.querySelector(".result");
+                        result_output.innerHTML = "Нет";
+                        }
+             } else {
+                let result_output = document.querySelector(".result");
+                result_output.innerHTML = "Ошибка";
+            }
+ 
+     }
+
+  </script>
+
+  </head> 
+
+  <body>
+      <div>Введите первое число</div>
+      <input type = "number" name ="number1_input" id ="number1_input"/>
+
+      <div>Введите второе число</div>
+      <input type = "number" name ="number2_input" id ="number2_input"/>
+
+      <button onclick="show();">Вычислить</button>
+
+      <div class="result"> </div>
+
+  </body>
+
+</html>
+
