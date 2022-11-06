@@ -3,41 +3,45 @@
     <script>
           
         function calculating(){
-            let number1Field = document.querySelector("#number_1");
-            let number_1 = number1Field.value;
+            let number1Field = document.querySelector("#number_1");                             //получаем первое введенное число
+            let number_1 = number1Field.value;                                                  //присваиваем переменной первое введенное число
 
-            let number2Field = document.querySelector("#number_2");
-            let number_2 = number2Field.value;
+            let number2Field = document.querySelector("#number_2");                             //получаем второе введенное число
+            let number_2 = number2Field.value;                                                  //присваиваем переменной второе введенное число
 
-            let operationField = document.querySelector("#operation_enter");
-            let operation_enter = operationField.value;
+            let operationField = document.querySelector("#operation_enter");                    //получаем значение операции
+            let operation_enter = operationField.value;                                         // присваиваем переменной значение операции
 
-            if(number_1 !== "" && number_2 !== ""){
-                if ((number_2 == 0) && (operation_enter == "Деление")) {
-                    let number2_Field = document.querySelector(".result");
-                    number2_Field.innerHTML = "Ошибка ввода";                            
+            if(number_1 !== "" && number_2 !== ""){                                             // проверяем что введенные значения не пустые
+                if ((number_2 == 0) && (operation_enter == "Деление")) {                        // проверяем операцию деления на ноль
+                    let number2_Field = document.querySelector(".result"); 
+                    number2_Field.innerHTML = "Ошибка ввода";                                   // выводим в первое поле выввода сообщение об ошибке при знаменателе, равном нулю                            
                     resultField = document.querySelector(".result2");
-                    resultField.innerHTML = "";
+                    resultField.innerHTML = "";                                                 // убираем все предыдущие выведенные значения из второго поля вывода
                 }
-                let number_arr = [number_1, number_2, operation_enter];
+                let number_arr = [number_1, number_2, operation_enter];                         // складываем значения введенных чмсел и операции в массив
 
-                fetch("calc_ajax.php?number_arr=" + number_arr)
+                fetch("calc_ajax.php?number_arr=" + number_arr)                                 // отправляем массив с введенными данными на сервер
                     .then(response => response.json())
                     .then(jsonObject => {
                         console.dir(jsonObject);
+                            resultField1 = document.querySelector(".result");
+                            resultField1.innerHTML = "Результат: " + jsonObject.query_result;   // получаем и выводим в первое поле вывода значение результата 
                             let i;
                             let s = "";
-                            for(i = 0; i < jsonObject.results.length; i++){
-                                s += jsonObject.results[i].join('<br>') + " ; ";
+                            for(i = 0; i < jsonObject.results1.length; i++){
+                                s += jsonObject.results1[i].join('<br>') + " ; ";               // перебираем массив из строк, полученных из базы данных 
+                                                                                                // и содержащих значения полей Id, первое число, второе число, операция, дата и время создания
+                                                                                                // склеиваем в одну сплошную строку, делаем перенос на новую строку после каждого элемента массива
                             }
                             resultField = document.querySelector(".result2");
-                            resultField.innerHTML = s;
+                            resultField.innerHTML = s;                                          // выводим значения предыдущих 7 операций во втрое поле вывода 
                         })
             }   else {
                     let number2_Field = document.querySelector(".result");
-                    number2_Field.innerHTML = "Введите числа";                            
+                    number2_Field.innerHTML = "Введите числа";                                  // выводим сообщение с просьбой ввести числа, если они пустые                           
                     resultField = document.querySelector(".result2");
-                    resultField.innerHTML = "";
+                    resultField.innerHTML = "";                                                 // убираем все предыдущие выведенные значения из второго поля вывода
                 }
 
         }
