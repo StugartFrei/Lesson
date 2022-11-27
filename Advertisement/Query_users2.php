@@ -58,6 +58,7 @@ class Query_users {
         return mysqli_fetch_assoc($query);
 
     }
+
 }
 
 ?>

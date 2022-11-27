@@ -22,15 +22,13 @@ else if($users_data -> method() == "POST"){
     $users = Query_users::load_from_query();
 }
 else if($users_data -> method() == "PUT"){
-    //$entered_data = $users_data -> entered_data();
-    $query_work -> update_the_query();
-    //$query_work -> update_the_query($entered_data[0], $entered_data[1], $entered_data[2], $entered_data[3], $entered_data[4]); 
+    $entered_data = $users_data -> entered_data();
+    $query_work -> update_the_query($entered_data[0], $entered_data[1], $entered_data[2], $entered_data[3], $entered_data[4]); 
     $users = Query_users::load_from_query();
 }
 else if($users_data -> method() == "DELETE"){
-    //$entered_data = $users_data -> entered_data();
-    $query_work -> delete_from_query(42);
-    //$query_work -> delete_from_query($entered_data[0]);
+    $entered_data = $users_data -> entered_data();
+    $query_work -> delete_from_query($entered_data[0]);
     $users = Query_users::load_from_query();
 }
 echo "<pre>";
