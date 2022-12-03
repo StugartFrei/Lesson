@@ -40,11 +40,9 @@ class Query_users {
         return $one_user;
     }
 
- 
-    public function update_the_query($id, $name, $lastname, $phone_number, $email){    
-        self::query("UPDATE `author` SET `name`='$name',`lastname`='$lastname',`phone_number`='$phone_number',`email`='$email' WHERE `id` = '$id';");
+     public function update_the_query($id, $query_fields){    
+        self::query("UPDATE `author` SET $query_fields WHERE `id` = '$id';");
     }
-
 
     public function delete_from_query($id){
         self::query("DELETE FROM `author` WHERE `id`='$id'");

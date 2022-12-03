@@ -30,8 +30,21 @@ else if($users_data -> method() == "POST"){
 }
 else if($users_data -> method() == "PUT"){
     parse_str(file_get_contents('php://input'), $_PUT);
-    if(!empty($_PUT["id"]) && !empty($_PUT["name"]) && !empty($_PUT["lastname"] && !empty($_PUT["phone_number"]) && !empty($_PUT["email"]))){
-        $query_work -> update_the_query($_PUT["id"], $_PUT["name"], $_PUT["lastname"], $_PUT["phone_number"], $_PUT["email"]); 
+    if(!empty($_PUT["id"])){
+        $query_id = $_PUT["id"];
+        if(!empty($_PUT["name"])){
+            $query_fields = "`name` = '". $_PUT["name"] . "'";
+        }
+        if(!empty($_PUT["lastname"])){
+            $query_fields = $query_fields . ", `lastname` = '" . $_PUT["lastname"] ."'";
+        }
+        if(!empty($_PUT["phone_number"])){
+            $query_fields = $query_fields . ", `phone_number` = " . $_PUT["phone_number"] ."";
+        }
+        if(!empty($_PUT["email"])){
+            $query_fields = $query_fields . ", `email` = '" . $_PUT["email"] ."'";
+        }
+        $query_work -> update_the_query($query_id, $query_fields); 
         echo json_encode(["result" => true, "message" => "User is changed"]);
         $users = Query_users::load_from_query();
     }
