@@ -1,0 +1,114 @@
+body{
+   margin: 0;
+   padding: 0;
+}
+
+.header{
+    height: 60px;
+    line-height: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    background: #0EA5E9;
+    font-size: 20px;
+}
+
+.formName{
+    color:#0EA5E9;
+    font-weight: bold;
+    margin-left: 450px;
+    font-size: 25px;
+    margin-top: 300px;   
+}
+
+.registerButton{
+    background: #0EA5E9;
+    color: white;
+    position: absolute;
+    border-radius: 3px;
+    border: none;
+    width: 200px;
+    height: 32px;
+    cursor: pointer;
+    margin-left: 375px;
+    margin-top: 140px;
+    font-size: 16px;
+}
+
+.formInputEmail{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-left: 275px;;
+    margin-top: 30px;
+    height: 50px;
+    width: 400px;
+    border-color: #0EA5E9;
+}
+
+.formEmail{
+    color:#0EA5E9;
+    font-weight: bold;
+    margin-left: 275px;
+    font-size: 16px;
+    font-style: italic;
+    margin-top: 10px;   
+}
+
+.formInputPassword{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-left: 275px;
+    margin-top: 20px;
+    height: 50px;
+    width: 400px;
+    border-color: #0EA5E9;
+}
+
+.formPassword{
+    color:#0EA5E9;
+    font-weight: bold;
+    margin-left: 275px;
+    font-size: 16px;
+    font-style: italic;
+    margin-top: 10px;    
+}
+
+.buttonEnter{
+    background: #0EA5E9;
+    color: white;
+    position: absolute;
+    border-radius: 3px;
+    border: none;
+    width: 200px;
+    height: 32px;
+    cursor: pointer;
+    margin-left: 375px;
+    margin-top: 70px;
+    font-size: 16px;
+}
+
+.formInputPhone{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-left: 275px;
+    margin-top: 20px;
+    height: 50px;
+    width: 400px;
+    border-color: #0EA5E9; 
+}
+
+.formPhone{
+    color:#0EA5E9;
+    font-weight: bold;
+    margin-left: 275px;
+    font-size: 16px;
+    font-style: italic;
+    margin-top: 10px;   
+}
+
+.content{
+    height: 600px;
+}
