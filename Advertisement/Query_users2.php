@@ -2,7 +2,7 @@
 
 class Query_users {
 
-    private static $connection;
+    public static $connection;
 
     public function __construct(){
         Query_users::connect();
@@ -48,7 +48,7 @@ class Query_users {
         self::query("DELETE FROM `author` WHERE `id`='$id'");
     }
 
-    private static function query($sqlString){
+    public static function query($sqlString){
         return mysqli_query(self::$connection, $sqlString);
     }
 
