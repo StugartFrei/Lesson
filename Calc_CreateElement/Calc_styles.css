@@ -1,0 +1,50 @@
+body{
+    margin: 5px;
+    padding: 5px;
+ }
+
+ .firstNumberText{
+    padding: 5px;
+ }
+
+ .formInputFirstNumber{
+    margin-top: 5px;
+    margin-left: 5px;
+ }
+
+ .secondNumberText{
+    margin-top: 5px;
+    padding: 5px;
+ }
+
+ .formInputSecondNumber{
+    margin-top: 5px;
+    margin-left: 5px;
+ }
+
+ .OperationText{
+    margin-top: 10px;
+    margin-left: 5px;
+ }
+
+ .operation_val{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 5px;
+ }
+
+ .resultButton{
+    display: flex;
+    margin-top: 15px;
+    margin-left: 5px;
+ }
+
+ .resultText{
+    margin-top: 10px;
+    margin-left: 5px;
+ }
+
+ .result{
+    margin-top: 10px;
+    margin-left: 5px;
+ }
